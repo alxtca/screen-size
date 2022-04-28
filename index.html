@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      /*
+        sm - mobile portrait: less than 640px
+        md - mobile landscape: > 640px
+        lg - tablet portrait: > 768px
+        xl - tablet landscape: > 1024px
+        xxl - laptop: > 1280px
+      */
       * {
         box-sizing: border-box;
       }
@@ -13,203 +20,104 @@
         --heightY: 500px;
       }
       .box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
         background-color: lightgray;
         width: 96%;
         margin: 0 auto;
         height: var(--heightY);
         border: 1px solid black;
-        /*text-align: center;*/
-        /* vertical align: use line height same as container height */
-        /*line-height: var(--heightY);*/
       }
-      .sc1 {
+      .inner {
+        background-color: aquamarine;
+        border: 1px solid black;
+        border-radius: 4px;
+        flex: 1;
+        margin: 10px;
         display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      .sc2 {
+      .sm {
+        display: flex;
+        flex-direction: column;
+      }
+      .md {
         display: none;
       }
-      .sc3 {
+      .lg {
         display: none;
       }
-      .sc4 {
+      .xl {
         display: none;
       }
-      .sc5 {
-        display: none;
-      }
-      .sc6 {
-        display: none;
-      }
-      .sc7 {
+      .xxl {
         display: none;
       }
 
-      @media screen and (min-width: 361px) {
-        .sc1 {
+      /* md - mobile landscape: > 640px */
+      @media screen and (min-width: 640px) {
+        .sm {
           display: none;
         }
-        .sc2 {
-          display: flex; /*less than 500px*/
-        }
-        .sc3 {
-          display: none;
-        }
-        .sc4 {
-          display: none;
-        }
-        .sc5 {
-          display: none;
-        }
-        .sc6 {
-          display: none;
-        }
-        .sc7 {
-          display: none;
+        .md {
+          display: flex;
         }
       }
-      @media screen and (min-width: 501px) {
-        .sc1 {
+      /* lg - tablet portrait: > 768px */
+      @media screen and (min-width: 768px) {
+        .md {
           display: none;
         }
-        .sc2 {
-          display: none;
-        }
-        .sc3 {
-          display: flex; /*less than 740px*/
-        }
-        .sc4 {
-          display: none;
-        }
-        .sc5 {
-          display: none;
-        }
-        .sc6 {
-          display: none;
-        }
-        .sc7 {
-          display: none;
-        }
-      }
-      @media screen and (min-width: 741px) {
-        .sc1 {
-          display: none;
-        }
-        .sc2 {
-          display: none;
-        }
-        .sc3 {
-          display: none;
-        }
-        .sc4 {
-          display: flex; /*less than 768px*/
-        }
-        .sc5 {
-          display: none;
-        }
-        .sc6 {
-          display: none;
-        }
-        .sc7 {
-          display: none;
-        }
-      }
-      @media screen and (min-width: 769px) {
-        .sc1 {
-          display: none;
-        }
-        .sc2 {
-          display: none;
-        }
-        .sc3 {
-          display: none;
-        }
-        .sc4 {
-          display: none;
-        }
-        .sc5 {
-          display: flex; /*less than 992px*/
-        }
-        .sc6 {
-          display: none;
-        }
-        .sc7 {
-          display: none;
-        }
-      }
-      @media screen and (min-width: 991px) {
-        .sc1 {
-          display: none;
-        }
-        .sc2 {
-          display: none;
-        }
-        .sc3 {
-          display: none;
-        }
-        .sc4 {
-          display: none;
-        }
-        .sc5 {
-          display: none;
-        }
-        .sc6 {
-          display: flex; /*less than 1080px*/
-        }
-        .sc7 {
-          display: none;
+        .lg {
+          display: flex;
+          flex-direction: column;
         }
       }
 
-      @media screen and (min-width: 1081px) {
-        .sc1 {
+      /* xl - tablet landscape: > 1024px */
+      @media screen and (min-width: 1024px) {
+        .lg {
           display: none;
         }
-        .sc2 {
+        .xl {
+          display: flex;
+        }
+      }
+
+      /* laptop - tablet landscape: > 1280px */
+      @media screen and (min-width: 1280px) {
+        .xl {
           display: none;
         }
-        .sc3 {
-          display: none;
-        }
-        .sc4 {
-          display: none;
-        }
-        .sc5 {
-          display: none;
-        }
-        .sc6 {
-          display: none;
-        }
-        .sc7 {
-          display: flex; /*less than 1200px*/
+        .xxl {
+          display: flex;
         }
       }
     </style>
   </head>
   <body>
-    <div class="box sc1">
-      <p>screen size: <strong>[0, 360]px</strong></p>
+    <div class="box sm">
+      <div class="inner" style="background-color: lightskyblue"><p>mobile portrait: < 640px.</p></div>
+      <div class="inner"><h1>2</h1></div>
     </div>
-    <div class="box sc2">
-      <p>screen size: <strong>[360, 500]px</strong></p>
+
+    <div class="box md">
+      <div class="inner" style="background-color: lightcoral"><p>mobile landscape: > 640px</p></div>
+      <div class="inner"><h1>2</h1></div>
     </div>
-    <div class="box sc3">
-      <p>screen size: <strong>[500,740]px</strong></p>
+
+    <div class="box lg">
+      <div class="inner" style="background-color: lightslategray"><p>tablet portrait: > 768px</p></div>
+      <div class="inner"><h1>2</h1></div>
     </div>
-    <div class="box sc4">
-      <p>screen size: <strong>[740,768]px</strong></p>
+
+    <div class="box xl">
+      <div class="inner" style="background-color: orange"><p>tablet landscape: > 1024px</p></div>
+      <div class="inner"><h1>2</h1></div>
     </div>
-    <div class="box sc5">
-      <p>screen size: <strong>[768,992]px</strong></p>
-    </div>
-    <div class="box sc6">
-      <p>screen size: <strong>[992,1080]px</strong></p>
-    </div>
-    <div class="box sc7">
-      <p>screen size: <strong>[1080,1200]px</strong></p>
+
+    <div class="box xxl">
+      <div class="inner" style="background-color: pink"><p>Laptop: > 1280px</p></div>
+      <div class="inner"><h1>2</h1></div>
     </div>
   </body>
 </html>
