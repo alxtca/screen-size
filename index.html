@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      :root {
+        --heightY: 500px;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: lightgray;
+        width: 96%;
+        margin: 0 auto;
+        height: var(--heightY);
+        border: 1px solid black;
+        /*text-align: center;*/
+        /* vertical align: use line height same as container height */
+        /*line-height: var(--heightY);*/
+      }
+      .sc1 {
+        display: flex;
+      }
+      .sc2 {
+        display: none;
+      }
+      .sc3 {
+        display: none;
+      }
+      .sc4 {
+        display: none;
+      }
+      .sc5 {
+        display: none;
+      }
+      .sc6 {
+        display: none;
+      }
+      .sc7 {
+        display: none;
+      }
+
+      @media screen and (min-width: 360px) {
+        .sc1 {
+          display: none;
+        }
+        .sc2 {
+          display: flex; /*less than 500px*/
+        }
+        .sc3 {
+          display: none;
+        }
+        .sc4 {
+          display: none;
+        }
+        .sc5 {
+          display: none;
+        }
+        .sc6 {
+          display: none;
+        }
+        .sc7 {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 500px) {
+        .sc1 {
+          display: none;
+        }
+        .sc2 {
+          display: none;
+        }
+        .sc3 {
+          display: flex; /*less than 740px*/
+        }
+        .sc4 {
+          display: none;
+        }
+        .sc5 {
+          display: none;
+        }
+        .sc6 {
+          display: none;
+        }
+        .sc7 {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 740px) {
+        .sc1 {
+          display: none;
+        }
+        .sc2 {
+          display: none;
+        }
+        .sc3 {
+          display: none;
+        }
+        .sc4 {
+          display: flex; /*less than 768px*/
+        }
+        .sc5 {
+          display: none;
+        }
+        .sc6 {
+          display: none;
+        }
+        .sc7 {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .sc1 {
+          display: none;
+        }
+        .sc2 {
+          display: none;
+        }
+        .sc3 {
+          display: none;
+        }
+        .sc4 {
+          display: none;
+        }
+        .sc5 {
+          display: flex; /*less than 992px*/
+        }
+        .sc6 {
+          display: none;
+        }
+        .sc7 {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .sc1 {
+          display: none;
+        }
+        .sc2 {
+          display: none;
+        }
+        .sc3 {
+          display: none;
+        }
+        .sc4 {
+          display: none;
+        }
+        .sc5 {
+          display: none;
+        }
+        .sc6 {
+          display: flex; /*less than 1080px*/
+        }
+        .sc7 {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 1080px) {
+        .sc1 {
+          display: none;
+        }
+        .sc2 {
+          display: none;
+        }
+        .sc3 {
+          display: none;
+        }
+        .sc4 {
+          display: none;
+        }
+        .sc5 {
+          display: none;
+        }
+        .sc6 {
+          display: none;
+        }
+        .sc7 {
+          display: flex; /*less than 1200px*/
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box sc1">
+      <p>screen size less than <strong>360px</strong></p>
+    </div>
+    <div class="box sc2">
+      <p>screen size less than <strong>500px</strong></p>
+    </div>
+    <div class="box sc3">
+      <p>screen size less than <strong>740px</strong></p>
+    </div>
+    <div class="box sc4">
+      <p>screen size less than <strong>768px</strong></p>
+    </div>
+    <div class="box sc5">
+      <p>screen size less than <strong>992px</strong></p>
+    </div>
+    <div class="box sc6">
+      <p>screen size less than <strong>1080px</strong></p>
+    </div>
+    <div class="box sc7">
+      <p>screen size less than <strong>1200px</strong></p>
+    </div>
+  </body>
+</html>
