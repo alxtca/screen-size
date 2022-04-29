@@ -19,11 +19,16 @@
       :root {
         --heightY: 500px;
       }
+      html,
+      body { /*for .box heigh:96%; to work*/
+        height: 100%;
+        margin: 0;
+      }
       .box {
         background-color: lightgray;
         width: 96%;
         margin: 0 auto;
-        height: var(--heightY);
+        height: 96%;
         border: 1px solid black;
       }
       .inner {
